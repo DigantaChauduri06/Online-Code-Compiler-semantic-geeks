@@ -15,14 +15,17 @@ function Navbar() {
         </span>
         OnlineIDE
       </div>
-        <div className="searchbar">
+        {/* <div className="searchbar">
           <input className="search" type="text" /><span>Save</span>
-        </div>
-        <button className="newbtn" >New</button>
+        </div> */}
+        
       </div>
 
-
+      <span className='menu'>
+        <ion-icon name="menu"></ion-icon>
+        </span>
       <div className="right flex">
+      <button className="newbtn" >New</button>
             <select name="" id="" className="size">
               <option value="">SMALL</option>
               <option value="">MEDIUM</option>
@@ -40,6 +43,7 @@ function Navbar() {
             Login
           </button>
       </div>
+
    </div>
   );
 }

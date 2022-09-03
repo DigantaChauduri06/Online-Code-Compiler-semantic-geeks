@@ -6,7 +6,8 @@
     display: flex;
 }
 .navbar{
-    justify-content: space-between;    
+    justify-content: space-between; 
+    position: relative;   
     align-items: center;
     background-color: rgba(0, 0, 0, 0.683);
 }
@@ -106,16 +107,28 @@
     margin: 10px; 
     background-color: #383838;
 }
+/* menu */
+.menu{
+    display: none;
+}
 
-/* media query */
+
+
+/* media query at 900*/
 @media screen and (max-width:900px) {
     .searchbar{
         display: none;
     }
+}
+
+/* media query at 500*/
+@media screen and (max-width:600px) {
     .newbtn{
-        position: fixed;
-        right: 0;
-        z-index: 1;
-        bottom: 0;
+        display: none;
+    }
+    .right{
+        width: 200px;
+        flex-direction: column;
+        position: relative;
     }
 }
