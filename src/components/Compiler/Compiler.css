@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* navbar */
+.compiler-nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background-color: #3d3c42;
+  color: #ffffff;
+}
+
+.untitled {
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.untitledText {
+  font-family: 'Mukta', sans-serif;
+}
+
+.dropbtn {
+  background-color: #42855b;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  letter-spacing: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 15.5rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.runBtn {
+  padding: 1rem 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  letter-spacing: 0.3rem;
+
+  background-image: linear-gradient(
+    to right,
+    #44be4d,
+    #40bf64,
+    #42bf79,
+    #4abf8a,
+    #57be98
+  );
+}
+
+.runBtn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #4bb553,
+    #52b65b,
+    #59b662,
+    #60b769,
+    #67b770
+  );
+}
+
+.dropdown_and_run_btn {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+/* code input and output */
+.code_editor_and_output {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.code_editor {
+  background-color: #1c2130;
+}
+
+.code_output {
+  background-color: #1d1e22;
+}

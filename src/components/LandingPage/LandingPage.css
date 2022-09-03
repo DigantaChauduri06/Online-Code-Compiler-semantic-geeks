@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* icon */
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #DFDFDE;
+
+    text-align: center;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon-pic {
+    font-size: 15rem;
+    color: #3CCF4E;
+    transform: rotate(360deg);
+    animation: loading 4s linear infinite;
+}
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+        animation-play-state: paused;
+    }
+}
+
+/* icon heading */
+.icon-heading {
+    margin-top: 2rem;
+    font-size: 4.5rem;
+    letter-spacing: 0.4rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    
+}
+
+.icon-heading-IDE-word {
+    color: #14C38E;
+    font-weight: 700;
+    font-size: 4.7rem;
+}
+
+/* landing para */
+.landing-para {
+    margin-top: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.online-word {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #14C38E;
+}
+
+
+/* get started button */
+.get-started-btn {
+    margin-top: 5.5rem;
+    padding: 2rem 6rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    background-image: linear-gradient(to right bottom, #00ffab, #2efbbc, #4df6ca, #6af1d4, #84ebda);
+    transition: all 0.4s;
+}
+
+.btn-text-link {
+    text-decoration: none;
+    color: black;
+}
+
+.get-started-btn:hover {
+    transform: translateY(-5px);
+    background-image: linear-gradient(to left bottom, #16f5ab, #34efb7, #4ee8c0, #65e1c6, #7bd9c9);
+    cursor: pointer;
+}
