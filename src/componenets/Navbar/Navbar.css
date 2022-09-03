@@ -1,5 +1,8 @@
 *{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .flex{
@@ -7,9 +10,13 @@
 }
 .navbar{
     justify-content: space-between; 
-    position: relative;   
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.683);
+    position: relative;
+    background:linear-gradient(to right,
+     rgba(13, 28, 39, 0.756),
+      rgba(41, 74, 47, 0.699),
+      rgba(50, 85, 97, 0.541));
+    transition: 0.3s;
 }
 /* left */
 .left{
@@ -69,6 +76,13 @@
     color: #3CCF4E;	
 }
 
+.logo:hover .icon{
+    /* box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.349); */
+    transform:rotate(1800deg);
+    transition: all 1.2s ease-in-out;
+    color: rgba(220, 113, 19, 0.856);
+}
+
 /* .right */
 .right{
     justify-content: center;
@@ -96,7 +110,11 @@
     text-align: center;
     color:white;
     margin: 10px;
-    background-color: #383838;  
+    background-color: rgba(19, 53, 77, 0.594); 
+    transition: 0.5s;
+}
+.language:hover{
+    box-shadow: 0px 0px 4px 0px rgba(19, 53, 77, 0.594);
 }
 .size{
     -webkit-appearance: none;
@@ -105,12 +123,13 @@
     text-align: center;
     color: white;
     margin: 10px; 
-    background-color: #383838;
+    background-color: rgba(19, 53, 77, 0.594);
+    transition: 0.5s;
+}
+.size:hover{
+    box-shadow: 0px 0px 4px 0px rgba(19, 53, 77, 0.594);
 }
 /* menu */
-.menu{
-    display: none;
-}
 
 
 
@@ -122,13 +141,32 @@
 }
 
 /* media query at 500*/
-@media screen and (max-width:600px) {
-    .newbtn{
-        display: none;
+
+
+.navbar .toggle-icon{
+    display: none;
+}
+
+@media(max-width:600px) {
+    .navbar{
+        transition: 0.5s height ease-in-out;
     }
-    .right{
-        width: 200px;
+    .navbar.expanded{
         flex-direction: column;
-        position: relative;
+        height: 100vh;
+        align-items: flex-start;
     }
+    .logo{
+        padding-top: 10px;
+    }
+    .navbar .toggle-icon{
+       position: absolute;
+       display: block;
+        top: 20px;
+       right: 20px;
+       color: #D9D2C3;
+   }
+   .p-right{
+    display: none;
+   }
 }
