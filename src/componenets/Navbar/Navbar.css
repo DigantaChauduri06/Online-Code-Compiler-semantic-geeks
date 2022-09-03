@@ -1,0 +1,121 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+.navbar{
+    justify-content: space-between;    
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.683);
+}
+/* left */
+.left{
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    margin: 10px;
+}
+.searchbar{
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    margin-left: 15px;
+}
+.search{
+    line-height: 2;
+    padding: 5px;
+}
+.searchbar span{
+    margin-left:4px ;
+    padding: 8px;
+}
+.search:hover{
+    /* background-color: rgba(0, 0, 0, 0.507); */
+    
+}
+.newbtn{
+    margin:15px;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 10px;
+    background:linear-gradient(to right,
+     rgba(11, 23, 32, 0.548),
+      rgba(51, 86, 58, 0.45));
+    transition: 0.3s;
+}
+.newbtn:hover{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.76);
+}
+
+.logo{
+    font: bold;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: poppins;
+    color: #edf2f7;
+    display:flex;
+    height: 100%;
+}
+
+.icon{
+    font-size: 1.875rem;
+    margin-right: 0.25rem;
+    -ms-flex-item-align: center;
+    color: #3CCF4E;	
+}
+
+/* .right */
+.right{
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.login{
+    margin:8px;
+    padding: 7px 22px;
+    background:linear-gradient(to right,
+     rgba(19, 53, 77, 0.594),
+      rgba(79, 134, 91, 0.37));
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.login:hover{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.76);
+}
+.language{
+    -webkit-appearance: none;
+    border-radius: 8px;
+    padding: 4px 10px;
+    text-align: center;
+    color:white;
+    margin: 10px;
+    background-color: #383838;  
+}
+.size{
+    -webkit-appearance: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+    text-align: center;
+    color: white;
+    margin: 10px; 
+    background-color: #383838;
+}
+
+/* media query */
+@media screen and (max-width:900px) {
+    .searchbar{
+        display: none;
+    }
+    .newbtn{
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        bottom: 0;
+    }
+}
