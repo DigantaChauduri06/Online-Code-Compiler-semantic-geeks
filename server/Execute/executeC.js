@@ -12,7 +12,7 @@ const executeC = (filepath) => {
     const jobid = path.basename(filepath).split(".")[0]
     const outPath = path.join(outputPath, `${jobid}.out`)
     return new Promise((res, rej) => {
-        exec(`gcc ${filepath} -o ${outPath} && ./outputs/${jobid}.out`, (err, stdout, stderr) => {
+        exec(`gcc ${filepath} -o ${outPath} && ./Execute/outputs/${jobid}.out`, (err, stdout, stderr) => {
             if (err) {
                 rej({ error: err, })
             }

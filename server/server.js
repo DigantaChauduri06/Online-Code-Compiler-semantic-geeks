@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors')
 require('dotenv').config();
 const { genarateCode } = require('./Execute/genrateFile')
 const { executeCpp } = require("./Execute/executeCpp")
@@ -18,6 +19,10 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }))
+app.use(cors({
+    origin: "*"
+}))
 
 app.use('/api/v1', userRoutes);
 
@@ -28,8 +33,10 @@ app.listen(PORT, () => {
 });
 app.post("/code", async (req, res) => {
     const { language = "cpp", code } = req.body
+    console.log(language, code);
     if (code === undefined) {
         res.status(400).json({ message: "Empty code body" })
+        return
     }
     try {
         const filePath = await genarateCode(language, code)
